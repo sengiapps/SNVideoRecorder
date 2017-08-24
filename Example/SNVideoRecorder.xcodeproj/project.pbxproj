@@ -29,9 +29,9 @@
 
 /* Begin PBXFileReference section */
 		017D81738340730629BE7A48 /* Pods-SNVideoRecorder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNVideoRecorder_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNVideoRecorder_Tests/Pods-SNVideoRecorder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		04C12C35D53C4A8D40D7D5A0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04C12C35D53C4A8D40D7D5A0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		09475CD847AA0F13856EDF33 /* Pods-SNVideoRecorder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNVideoRecorder_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNVideoRecorder_Example/Pods-SNVideoRecorder_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3B31105993FC08EE92E6D05B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3B31105993FC08EE92E6D05B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SNVideoRecorder_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNVideoRecorder_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		7AC0A57516C0BEB67FFC513E /* Pods-SNVideoRecorder_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNVideoRecorder_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNVideoRecorder_Example/Pods-SNVideoRecorder_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7C93C0A848CA467DC2B4AB84 /* Pods_SNVideoRecorder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNVideoRecorder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C550C4D5E3C8ED28F40E9B37 /* Pods_SNVideoRecorder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNVideoRecorder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0CC53F54005679513FFBC28 /* SNVideoRecorder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SNVideoRecorder.podspec; path = ../SNVideoRecorder.podspec; sourceTree = "<group>"; };
+		F0CC53F54005679513FFBC28 /* SNVideoRecorder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SNVideoRecorder.podspec; path = ../SNVideoRecorder.podspec; sourceTree = "<group>"; };
 		FA6A8E62B6DDB07B4289925E /* Pods-SNVideoRecorder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNVideoRecorder_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNVideoRecorder_Tests/Pods-SNVideoRecorder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = A75N5QXPXT;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = A75N5QXPXT;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -285,13 +287,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNVideoRecorder_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9817587E34EA7574FEDCEF1F /* [CP] Copy Pods Resources */ = {
@@ -330,9 +335,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNVideoRecorder_Example/Pods-SNVideoRecorder_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SNVideoRecorder/SNVideoRecorder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SNVideoRecorder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -345,13 +355,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNVideoRecorder_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,7 +509,9 @@
 			baseConfigurationReference = 09475CD847AA0F13856EDF33 /* Pods-SNVideoRecorder_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A75N5QXPXT;
 				INFOPLIST_FILE = SNVideoRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +525,9 @@
 			baseConfigurationReference = 7AC0A57516C0BEB67FFC513E /* Pods-SNVideoRecorder_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A75N5QXPXT;
 				INFOPLIST_FILE = SNVideoRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -523,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 017D81738340730629BE7A48 /* Pods-SNVideoRecorder_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A75N5QXPXT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA6A8E62B6DDB07B4289925E /* Pods-SNVideoRecorder_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A75N5QXPXT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

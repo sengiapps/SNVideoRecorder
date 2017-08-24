@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import SNVideoRecorder
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func openHandler(_ sender: Any) {
+        let vc = SNVideoRecorderViewController()
+        vc.delegate = self
+        vc.flashLightOnIcon = UIImage(named: "flash_light_50")
+        vc.flashLightOffIcon = UIImage(named: "flash_light_off_50")
+        
+        vc.flashLightOption.setImage(UIImage(named: "flash_light_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        vc.switchCameraOption.setImage(UIImage(named: "switch_camera_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        vc.closeOption.setImage(UIImage(named: "delete_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        present(vc, animated: true, completion: nil)
     }
-
 }
 
+extension ViewController: SNVideoRecorderDelegate {
+    
+    func videoRecorder(withVideo url: URL) {
+        print(url)
+    }
+    
+    func videoRecorder(withImage image: UIImage) {
+        print(image)
+    }
+}

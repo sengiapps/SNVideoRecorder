@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import SNVideoRecorder
+//import SNVideoRecorder
 
 class Tests: XCTestCase {
     
