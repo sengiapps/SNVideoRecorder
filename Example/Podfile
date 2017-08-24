@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SNVideoRecorder_Example' do
+  pod 'SNVideoRecorder', :path => '../'
+
+  target 'SNVideoRecorder_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
