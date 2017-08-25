@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		08C3F808630C144F90685E34BCED8DEE /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C43FE6E3AA9DC86CD16E068D2BE1F /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
 		1612C87FA9DAA22F840A9D437A28BFE2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19504DE46FE70E76AD56191B2034C8 /* AVFoundation.framework */; };
+		193A2A2090534B3460F778FC26DEE89D /* SNVideoRecorderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579DD921FBB2DED96EF13169714ACA6C /* SNVideoRecorderViewProtocol.swift */; };
 		1F7D123895A3858CD55A41BEE5279C1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE5161A60D5D5CB2F5EC92FA93FE5FC /* Foundation.framework */; };
 		200B11E8E2FCF14F00A14EDDB9F807FE /* Pods-SNVideoRecorder_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA3E000B71ACFC1565841076CB7D73 /* Pods-SNVideoRecorder_Example-dummy.m */; };
+		2036187B72525D14A211B1916999D345 /* SNRecordingCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF132FC3DF102543968FDEABF6CEBFC /* SNRecordingCountDown.swift */; };
 		21DCFB78A4DB6ED465FC45945582E8CD /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D9F492A7836AF0DF64BF19EDB6F08 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
 		240FA1CEFEB5E3A5F4D04CE4E25E8B82 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB2EA72D2F927D7AA9F3D9A7F57638 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
 		307D313A0CE0CFC89C44B5795ED927F3 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B9F9C8DD92321DF6A6BF5257A2951 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
@@ -20,20 +22,19 @@
 		42541268F9036CAFE8682204ABD77AA6 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35E44F6DB762909863AB4E03F4AE576 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
 		442D3B54A30680D61EDF2192191A990B /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688839D3E66F4C94F3CA281377CEE8 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
 		454D6945388874871E2F0F9B04A47E70 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F54B904EF5EA7A8A367BE3B8B7754 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
+		4B4B93D1EB905A76AD94B9D1EBEE2FF2 /* SNVideoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4255DDB2BB6626EDAE27EC2FE2CC66ED /* SNVideoViewerViewController.swift */; };
 		4D7F64AC19454C57F7C900664F31EC04 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14581A18B79862A97566A7FFC10715 /* NVActivityIndicatorView-dummy.m */; };
-		4E9E748F16F8F26483DAF10F66547674 /* SNVideoRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CB9549CED44B07986250ACA0A27D2 /* SNVideoRecorderViewController.swift */; };
-		524674D94A02246779721AB947459973 /* SNRecordingCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD07276BFC0E76C1B1E959451E21456 /* SNRecordingCountDown.swift */; };
+		4F97CBD405EA0E1353CFCCBCA7B965CF /* SNVideoRecorderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9691A3D5878B93BF5EA87E328CA477C /* SNVideoRecorderDelegate.swift */; };
+		56DA04D6A32C9E39C7DE8DB0412517B8 /* SNVideoRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D42450BAD865D6DC5049D231790A /* SNVideoRecorderViewController.swift */; };
 		5A0E6739E53AC36665276ABE5F692693 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F45AE21F5822F24890CC8B47910BA4B /* NVActivityIndicatorShape.swift */; };
-		63E7CE2A6ABCC5E5AB2EF1822FE8BFBD /* SNVideoRecorderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32379D8B86CB2D9A28632F692DBF3CE3 /* SNVideoRecorderDelegate.swift */; };
 		668E5D4DECE5E4A8E8D9E6D47164D194 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69ADAB649440704E2A9D94004837001 /* NVActivityIndicatorAnimationPacman.swift */; };
 		66EA819AEC38557662BD80187474A9A0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E65BC07C7494023FAEAD2A9CAB57C6 /* NVActivityIndicatorAnimationBallBeat.swift */; };
+		692FA4811191FFC8A571B666F17C0938 /* SNRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6E20F6B2CDADD10BECE5014AFB50F /* SNRecordButton.swift */; };
 		703E23E87D370D269652E02CC4D0DB13 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A3D33998A5213FCE7A0843B6E54EE /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
-		75FC7E7AA75BBB6D118B581C2B4D7EF3 /* SNImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C5304E4D91C49623D8FDC111390DF /* SNImageViewerViewController.swift */; };
-		761DBAF2843F6EE745D0C52A26C633CC /* SNVideoRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5202E06E37C89BEA217387846FC9FB24 /* SNVideoRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		761DBAF2843F6EE745D0C52A26C633CC /* SNVideoRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2AF489D7F7A549B86D0FEAFA6FFDDF /* SNVideoRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76D4F8D8D5E30A9494F5E4EB055233D5 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6370D04795536292C34103E1639B4580 /* NVActivityIndicatorView.framework */; };
 		78273217402C4A644B3EBC3B149EE840 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320A0E6AAE83E8EE3C845B0EC72636C /* NVActivityIndicatorAnimationBallPulse.swift */; };
 		7A6014AEDB3614CF02281003AD4E9BBA /* Pods-SNVideoRecorder_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAFB975549B5195FFE4CA6D19051534B /* Pods-SNVideoRecorder_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CC256A3339212720E918F389342A8EC /* SNVideoRecorder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C06552538A5250A64CA2B85A8C002CA9 /* SNVideoRecorder.bundle */; };
 		7F4A6A5D53B89FD3053C04833838B04A /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A686D73D23D133D993B945D6E30C5 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
 		7FEE370B6529A919640173C97006CFF1 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6573097CE506E19DC65518B1AE03E64 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
 		8501C56A979C09DC2700800FD342DB2D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AE26127E5F3DB9833118A7A7FA118 /* NVActivityIndicatorAnimationBallRotate.swift */; };
@@ -42,10 +43,11 @@
 		8D961959484FC1FF71D46A27E889A75A /* NVActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 693C4BD1BD5012D2777845D3B2C6DB51 /* NVActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		911F8A697E6802F62098E1060A40AB03 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57D1D5C6DA4A49DE85022BA684CE8CA /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
 		9228D5B93079B71B8EA798A37817E5B0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823962314A436F120CF40A96AB3E256 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		946FAD18AED00C38C7B49044D43A9E8C /* SNImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB5E882B95A529D829CEEF90EFFDF4 /* SNImageViewerViewController.swift */; };
 		951575B21F879A84D376DCEE5F106086 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BAD5AD6CDB2DDCEAE3E43FDB842C8D /* UIKit.framework */; };
 		99DDD3A9627493DEC8152E8589525F55 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2D3C403B7B22E9E65CD71B6B19EF4 /* NVActivityIndicatorView.swift */; };
+		9BC479EACA48CDC1F8C0E0A55E768BD4 /* SNVideoRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8227443FFA9651C72CADAFFC5FD128 /* SNVideoRecorder-dummy.m */; };
 		A14036702B60EE3DF47A696F9272F825 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF66B6ACB603D3CA7395E65FBCE08CB /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
-		AB6D8EED1F4F95EA00BE2B67 /* SNVideoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D8EEC1F4F95EA00BE2B67 /* SNVideoViewerViewController.swift */; };
 		AC6783DA5C8F57783CF23C50613135C4 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675F1B3AA5C925505BC25D3B851CDEF2 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
 		AEC875604B480BE726BA6CE18DB5AA6F /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EECC668F65B6EB1F6E2AE3664ED837 /* NVActivityIndicatorAnimationCubeTransition.swift */; };
 		BE26A278F95E094311F6E1B1FAD285F9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B2A3B1E90D3DF1ED85EFE3540DA08 /* NVActivityIndicatorAnimationSquareSpin.swift */; };
@@ -55,13 +57,10 @@
 		D16A25127CB40B0CB1757FC1F124D05D /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3988D2ABCF7E9E73581AC4232B451 /* NVActivityIndicatorPresenter.swift */; };
 		D9B97EA5FD4BA034331BAD9A8FE8EDB7 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60BACC7B4177417855C11A631BDA71 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
 		DB16138DB7C9333B4CCA228657782131 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DDD709CDF9638BCA9FA8014C9B3216 /* NVActivityIndicatorAnimationDelegate.swift */; };
-		DFEE242D9EFC81F1C19F4C67F0F5A2CB /* SNVideoRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D6F6DD5CD2D88ED46B2E38E63EE3A /* SNVideoRecorder-dummy.m */; };
-		E2C0E5BF40274670068EA54A2A581A1D /* SNVideoRecorderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DA1278D7800EF4CF8D5096A902FAB /* SNVideoRecorderViewProtocol.swift */; };
 		E3BA27147B6FB7E9BFA2FD651461A207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE5161A60D5D5CB2F5EC92FA93FE5FC /* Foundation.framework */; };
 		E3CA84084C1AA5EE7BC3024B0904AF8F /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81284AB90E1FEF7348F3F6CD26822E41 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
 		E86E3CEC056AE6EB9A799755CDED7D28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAA9248F190ECA09CF98C7A8792E36 /* QuartzCore.framework */; };
 		EAB306F3EF9527904C5D56342697B84C /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA76F844CD25D0948772C3DA35CF25 /* NVActivityIndicatorAnimationLineScale.swift */; };
-		EB6298B69AE729266C42698E20E8EE53 /* SNRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4EC1740863F994EA1BEFA71D43BB9 /* SNRecordButton.swift */; };
 		EFAF4BB9DF37F64540764747D9289C2E /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04170558FA34BFD29D4599AA39AB789B /* NVActivityIndicatorAnimationOrbit.swift */; };
 		F3601BE043879F62020EDA568AB272C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE5161A60D5D5CB2F5EC92FA93FE5FC /* Foundation.framework */; };
 		F746490DD0C0029E6234116953A6D4EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE5161A60D5D5CB2F5EC92FA93FE5FC /* Foundation.framework */; };
@@ -93,76 +92,66 @@
 			remoteGlobalIDString = 3EDFE4052B5DE7D509935AC0774CB135;
 			remoteInfo = NVActivityIndicatorView;
 		};
-		E2018146EDC391BB51007320AF8BCE62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 690719523F2D1C042B9031499E3B64FE;
-			remoteInfo = "SNVideoRecorder-SNVideoRecorder";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D38FC987EE663B00F7142C3CFF4C91 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		038D4094D4958371B0520A8D0E6029DC /* Pods-SNVideoRecorder_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SNVideoRecorder_Example.modulemap"; sourceTree = "<group>"; };
+		038D4094D4958371B0520A8D0E6029DC /* Pods-SNVideoRecorder_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SNVideoRecorder_Example.modulemap"; sourceTree = "<group>"; };
 		04170558FA34BFD29D4599AA39AB789B /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationOrbit.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
-		058C5304E4D91C49623D8FDC111390DF /* SNImageViewerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNImageViewerViewController.swift; path = SNVideoRecorder/Classes/SNImageViewerViewController.swift; sourceTree = "<group>"; };
-		081CB9549CED44B07986250ACA0A27D2 /* SNVideoRecorderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderViewController.swift; path = SNVideoRecorder/Classes/SNVideoRecorderViewController.swift; sourceTree = "<group>"; };
 		0DF2D3C403B7B22E9E65CD71B6B19EF4 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorView.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		12E5D7D66DF7E57205389EDE48FABD1D /* Pods-SNVideoRecorder_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNVideoRecorder_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1320A0E6AAE83E8EE3C845B0EC72636C /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
 		136EE03B3851D2D6DCD73B9D1666EA19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		172A686D73D23D133D993B945D6E30C5 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
 		1894AD4F6F14963DA4F02051D80FEEFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		192AEAD9E10B3A3E1DDF00047B2FFA86 /* SNVideoRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SNVideoRecorder.modulemap; sourceTree = "<group>"; };
 		1CE6B6AE89B3D84B073B0B684883B860 /* Pods-SNVideoRecorder_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNVideoRecorder_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1F592EDE7475266FF084AE8A9C5B5BAC /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
 		20E236E58D2A95A20BA8923812299A49 /* NVActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
-		236AF9C626DB49E835C461BBC6E57499 /* SNVideoRecorder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNVideoRecorder-prefix.pch"; sourceTree = "<group>"; };
 		2401C94D911BF877CB136D68206AC8C2 /* Pods-SNVideoRecorder_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNVideoRecorder_Example-resources.sh"; sourceTree = "<group>"; };
 		2D862FD51EC285D4764C090315CCB202 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
 		2DCAA9248F190ECA09CF98C7A8792E36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		2DF4EC1740863F994EA1BEFA71D43BB9 /* SNRecordButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNRecordButton.swift; path = SNVideoRecorder/Classes/SNRecordButton.swift; sourceTree = "<group>"; };
 		2F45AE21F5822F24890CC8B47910BA4B /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		31BEAE0BF28EC137966216D065314CDD /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotatePulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
-		32379D8B86CB2D9A28632F692DBF3CE3 /* SNVideoRecorderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderDelegate.swift; path = SNVideoRecorder/Classes/SNVideoRecorderDelegate.swift; sourceTree = "<group>"; };
 		374AE26127E5F3DB9833118A7A7FA118 /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
 		3D0A3D33998A5213FCE7A0843B6E54EE /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseRise.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
 		3EE5161A60D5D5CB2F5EC92FA93FE5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4255DDB2BB6626EDAE27EC2FE2CC66ED /* SNVideoViewerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoViewerViewController.swift; path = SNVideoRecorder/Classes/SNVideoViewerViewController.swift; sourceTree = "<group>"; };
 		425B40225C618A2DF97C51AA2ABC88FC /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
 		49688839D3E66F4C94F3CA281377CEE8 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
+		4A2AF489D7F7A549B86D0FEAFA6FFDDF /* SNVideoRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNVideoRecorder-umbrella.h"; sourceTree = "<group>"; };
 		4BE1F0C5A03D04DD19A098E4F8D53ACE /* Pods-SNVideoRecorder_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SNVideoRecorder_Tests-umbrella.h"; sourceTree = "<group>"; };
-		4F7DA1278D7800EF4CF8D5096A902FAB /* SNVideoRecorderViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderViewProtocol.swift; path = SNVideoRecorder/Classes/SNVideoRecorderViewProtocol.swift; sourceTree = "<group>"; };
-		5202E06E37C89BEA217387846FC9FB24 /* SNVideoRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNVideoRecorder-umbrella.h"; sourceTree = "<group>"; };
 		53001BD78FEF4A48AD39CD9852FC5C43 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
 		53E65BC07C7494023FAEAD2A9CAB57C6 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
 		54EA3E000B71ACFC1565841076CB7D73 /* Pods-SNVideoRecorder_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNVideoRecorder_Example-dummy.m"; sourceTree = "<group>"; };
+		56B1A6B2E0324822D4C0371F58E48B19 /* SNVideoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SNVideoRecorder.framework; path = SNVideoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		579DD921FBB2DED96EF13169714ACA6C /* SNVideoRecorderViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderViewProtocol.swift; path = SNVideoRecorder/Classes/SNVideoRecorderViewProtocol.swift; sourceTree = "<group>"; };
 		5E60BACC7B4177417855C11A631BDA71 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		61A6E20F6B2CDADD10BECE5014AFB50F /* SNRecordButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNRecordButton.swift; path = SNVideoRecorder/Classes/SNRecordButton.swift; sourceTree = "<group>"; };
 		6370D04795536292C34103E1639B4580 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		638B9F9C8DD92321DF6A6BF5257A2951 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		669D4B7D68A06524FE25394D9F342003 /* SNVideoRecorder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNVideoRecorder-prefix.pch"; sourceTree = "<group>"; };
 		675F1B3AA5C925505BC25D3B851CDEF2 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
 		693C4BD1BD5012D2777845D3B2C6DB51 /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
-		6BD07276BFC0E76C1B1E959451E21456 /* SNRecordingCountDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNRecordingCountDown.swift; path = SNVideoRecorder/Classes/SNRecordingCountDown.swift; sourceTree = "<group>"; };
-		70B0803BEA471E71AFD6DCF6C5A133AA /* ResourceBundle-SNVideoRecorder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SNVideoRecorder-Info.plist"; sourceTree = "<group>"; };
 		73CA76F844CD25D0948772C3DA35CF25 /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScale.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
 		79B4A5EFCE69422CE4A1246F891840CB /* Pods-SNVideoRecorder_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNVideoRecorder_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A8227443FFA9651C72CADAFFC5FD128 /* SNVideoRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SNVideoRecorder-dummy.m"; sourceTree = "<group>"; };
 		7DAB2EA72D2F927D7AA9F3D9A7F57638 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
 		7F14581A18B79862A97566A7FFC10715 /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
 		81284AB90E1FEF7348F3F6CD26822E41 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
-		819E70743ED346EA75483F65ECCBB7EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82661635A86AB20DF0F0E7BB3B0806EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8565E0F464FC7D074E2822D992760B9B /* Pods_SNVideoRecorder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SNVideoRecorder_Example.framework; path = "Pods-SNVideoRecorder_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF66B6ACB603D3CA7395E65FBCE08CB /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
 		90C132603F99C59BEFF2DB720867D665 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
 		92DDD709CDF9638BCA9FA8014C9B3216 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93009395DB6498EB4A767EEF09BB522B /* Pods_SNVideoRecorder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SNVideoRecorder_Tests.framework; path = "Pods-SNVideoRecorder_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		958F54B904EF5EA7A8A367BE3B8B7754 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotate.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
 		988D9F492A7836AF0DF64BF19EDB6F08 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
 		995EC7C4B2B86CBE2703F025A492A964 /* Pods-SNVideoRecorder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNVideoRecorder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D6CF9C46DE901429F930E62F4C63754 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRipple.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
+		A7AAB89CD8A3A562C953E87F1F2EE8BF /* SNVideoRecorder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SNVideoRecorder.xcconfig; sourceTree = "<group>"; };
+		A7CB5E882B95A529D829CEEF90EFFDF4 /* SNImageViewerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNImageViewerViewController.swift; path = SNVideoRecorder/Classes/SNImageViewerViewController.swift; sourceTree = "<group>"; };
 		A8C1DA59F9CDD976E908B54B8AEDFCEA /* Pods-SNVideoRecorder_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNVideoRecorder_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AB6D8EEC1F4F95EA00BE2B67 /* SNVideoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SNVideoViewerViewController.swift; path = SNVideoRecorder/Classes/SNVideoViewerViewController.swift; sourceTree = "<group>"; };
 		AC19504DE46FE70E76AD56191B2034C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		AC671873907626580EDD039093229040 /* Pods_SNVideoRecorder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNVideoRecorder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F4E99F413D41B8DA0A2EB3BDA03D7A /* Pods-SNVideoRecorder_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNVideoRecorder_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B5C3988D2ABCF7E9E73581AC4232B451 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		B8BAD5AD6CDB2DDCEAE3E43FDB842C8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -170,27 +159,28 @@
 		BAFB975549B5195FFE4CA6D19051534B /* Pods-SNVideoRecorder_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SNVideoRecorder_Example-umbrella.h"; sourceTree = "<group>"; };
 		BC5CD42B87506B71FBCD84D015CF589F /* Pods-SNVideoRecorder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNVideoRecorder_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BE7A0408565F75C83C2D57D75A98D168 /* Pods-SNVideoRecorder_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNVideoRecorder_Tests-dummy.m"; sourceTree = "<group>"; };
-		C06552538A5250A64CA2B85A8C002CA9 /* SNVideoRecorder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNVideoRecorder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17AA6B602811DDFC808C360560AED21 /* Pods-SNVideoRecorder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNVideoRecorder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C385DA28F36ECFE588CE0BA7B10FCE4D /* Pods-SNVideoRecorder_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNVideoRecorder_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C4FBAE94A8B781D1DFFF606B7E268EE4 /* Pods-SNVideoRecorder_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNVideoRecorder_Tests-resources.sh"; sourceTree = "<group>"; };
 		C57C1EA35073537E3D80B98E38D0759F /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 		C69ADAB649440704E2A9D94004837001 /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
-		C89E6DF5A3C93B0A6791D6FC2465FF8A /* Pods-SNVideoRecorder_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SNVideoRecorder_Tests.modulemap"; sourceTree = "<group>"; };
+		C77A48240E294FD6E56F8BC6184E8C57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C89E6DF5A3C93B0A6791D6FC2465FF8A /* Pods-SNVideoRecorder_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SNVideoRecorder_Tests.modulemap"; sourceTree = "<group>"; };
+		D000217CFFE12380A88BA34E91BBFDA8 /* SNVideoRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SNVideoRecorder.modulemap; sourceTree = "<group>"; };
 		D003E45750E9C7B6422C72FF10BE6CDC /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
-		D20D6F6DD5CD2D88ED46B2E38E63EE3A /* SNVideoRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SNVideoRecorder-dummy.m"; sourceTree = "<group>"; };
 		D35E44F6DB762909863AB4E03F4AE576 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
 		D57D1D5C6DA4A49DE85022BA684CE8CA /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationAudioEqualizer.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
 		D801A53FD1BA08DE7099C4C65BC15439 /* Pods-SNVideoRecorder_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNVideoRecorder_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D804B21C3B1DB58073049CDD9B48E85C /* Pods_SNVideoRecorder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNVideoRecorder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D823962314A436F120CF40A96AB3E256 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
-		DCA66A808795AD9F7CE2C670E84BCF2E /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
-		DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SNVideoRecorder.xcconfig; sourceTree = "<group>"; };
+		DCA66A808795AD9F7CE2C670E84BCF2E /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		DDF132FC3DF102543968FDEABF6CEBFC /* SNRecordingCountDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNRecordingCountDown.swift; path = SNVideoRecorder/Classes/SNRecordingCountDown.swift; sourceTree = "<group>"; };
 		E01C43FE6E3AA9DC86CD16E068D2BE1F /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
+		E1744942E0C9F8718AF4199488B2406C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EECC668F65B6EB1F6E2AE3664ED837 /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCubeTransition.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		F542D42450BAD865D6DC5049D231790A /* SNVideoRecorderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderViewController.swift; path = SNVideoRecorder/Classes/SNVideoRecorderViewController.swift; sourceTree = "<group>"; };
 		F6573097CE506E19DC65518B1AE03E64 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
-		F6A7A3F72BE55B795F3F80622302FEE2 /* SNVideoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNVideoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D09FFDCF5D9A31CB17BD982EB68F06 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
+		F9691A3D5878B93BF5EA87E328CA477C /* SNVideoRecorderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNVideoRecorderDelegate.swift; path = SNVideoRecorder/Classes/SNVideoRecorderDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,13 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE2B604D6DA667B370EBB7EC35940619 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -247,15 +230,8 @@
 				238ED7605A764AA7F23D4CA1F661D618 /* Presenter */,
 				4B68AE11B65F8BCDD1AFE4FF8E0955F4 /* Support Files */,
 			);
+			name = NVActivityIndicatorView;
 			path = NVActivityIndicatorView;
-			sourceTree = "<group>";
-		};
-		0EC86A8C6DDB0719781B44D0286C3553 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D45112115DDE0E15743535B97CECE3DF /* SNVideoRecorder */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		104A583A11B8C87D8777D68E9478FADD /* Pods */ = {
@@ -264,6 +240,22 @@
 				09E0C626905E57A135D1B6004D0B6059 /* NVActivityIndicatorView */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		120DB0A7B887BF1F969D9E309E9A5262 /* SNVideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB5E882B95A529D829CEEF90EFFDF4 /* SNImageViewerViewController.swift */,
+				61A6E20F6B2CDADD10BECE5014AFB50F /* SNRecordButton.swift */,
+				DDF132FC3DF102543968FDEABF6CEBFC /* SNRecordingCountDown.swift */,
+				F9691A3D5878B93BF5EA87E328CA477C /* SNVideoRecorderDelegate.swift */,
+				F542D42450BAD865D6DC5049D231790A /* SNVideoRecorderViewController.swift */,
+				579DD921FBB2DED96EF13169714ACA6C /* SNVideoRecorderViewProtocol.swift */,
+				4255DDB2BB6626EDAE27EC2FE2CC66ED /* SNVideoViewerViewController.swift */,
+				2605AC22E9CF4AF796101109B2FF8828 /* Support Files */,
+			);
+			name = SNVideoRecorder;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		238ED7605A764AA7F23D4CA1F661D618 /* Presenter */ = {
@@ -310,6 +302,20 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		2605AC22E9CF4AF796101109B2FF8828 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C77A48240E294FD6E56F8BC6184E8C57 /* Info.plist */,
+				D000217CFFE12380A88BA34E91BBFDA8 /* SNVideoRecorder.modulemap */,
+				A7AAB89CD8A3A562C953E87F1F2EE8BF /* SNVideoRecorder.xcconfig */,
+				7A8227443FFA9651C72CADAFFC5FD128 /* SNVideoRecorder-dummy.m */,
+				669D4B7D68A06524FE25394D9F342003 /* SNVideoRecorder-prefix.pch */,
+				4A2AF489D7F7A549B86D0FEAFA6FFDDF /* SNVideoRecorder-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SNVideoRecorder";
+			sourceTree = "<group>";
+		};
 		4B68AE11B65F8BCDD1AFE4FF8E0955F4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,16 +359,35 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		7075D7304BC6AFBD93E8734A4ED25F41 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				120DB0A7B887BF1F969D9E309E9A5262 /* SNVideoRecorder */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0EC86A8C6DDB0719781B44D0286C3553 /* Development Pods */,
+				7075D7304BC6AFBD93E8734A4ED25F41 /* Development Pods */,
 				E4FDAE32ED45DC00B87D192BAB73C53D /* Frameworks */,
 				104A583A11B8C87D8777D68E9478FADD /* Pods */,
-				C5519D2D44168A8C45ADCAAC9B064060 /* Products */,
+				A5F7715DAAFCDF74487513844EAA856D /* Products */,
 				F057D6D6B7145F68DC9E4B121F11667E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A5F7715DAAFCDF74487513844EAA856D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1744942E0C9F8718AF4199488B2406C /* NVActivityIndicatorView.framework */,
+				8565E0F464FC7D074E2822D992760B9B /* Pods_SNVideoRecorder_Example.framework */,
+				93009395DB6498EB4A767EEF09BB522B /* Pods_SNVideoRecorder_Tests.framework */,
+				56B1A6B2E0324822D4C0371F58E48B19 /* SNVideoRecorder.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BBD793C64F67800761BFCFC876CE0440 /* Pods-SNVideoRecorder_Example */ = {
@@ -381,49 +406,6 @@
 			);
 			name = "Pods-SNVideoRecorder_Example";
 			path = "Target Support Files/Pods-SNVideoRecorder_Example";
-			sourceTree = "<group>";
-		};
-		C5519D2D44168A8C45ADCAAC9B064060 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				02D38FC987EE663B00F7142C3CFF4C91 /* NVActivityIndicatorView.framework */,
-				D804B21C3B1DB58073049CDD9B48E85C /* Pods_SNVideoRecorder_Example.framework */,
-				AC671873907626580EDD039093229040 /* Pods_SNVideoRecorder_Tests.framework */,
-				C06552538A5250A64CA2B85A8C002CA9 /* SNVideoRecorder.bundle */,
-				F6A7A3F72BE55B795F3F80622302FEE2 /* SNVideoRecorder.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D45112115DDE0E15743535B97CECE3DF /* SNVideoRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				058C5304E4D91C49623D8FDC111390DF /* SNImageViewerViewController.swift */,
-				2DF4EC1740863F994EA1BEFA71D43BB9 /* SNRecordButton.swift */,
-				6BD07276BFC0E76C1B1E959451E21456 /* SNRecordingCountDown.swift */,
-				32379D8B86CB2D9A28632F692DBF3CE3 /* SNVideoRecorderDelegate.swift */,
-				081CB9549CED44B07986250ACA0A27D2 /* SNVideoRecorderViewController.swift */,
-				4F7DA1278D7800EF4CF8D5096A902FAB /* SNVideoRecorderViewProtocol.swift */,
-				AB6D8EEC1F4F95EA00BE2B67 /* SNVideoViewerViewController.swift */,
-				DB68A643C2E8D26A62E491B1CDF87E94 /* Support Files */,
-			);
-			name = SNVideoRecorder;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		DB68A643C2E8D26A62E491B1CDF87E94 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				819E70743ED346EA75483F65ECCBB7EA /* Info.plist */,
-				70B0803BEA471E71AFD6DCF6C5A133AA /* ResourceBundle-SNVideoRecorder-Info.plist */,
-				192AEAD9E10B3A3E1DDF00047B2FFA86 /* SNVideoRecorder.modulemap */,
-				DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */,
-				D20D6F6DD5CD2D88ED46B2E38E63EE3A /* SNVideoRecorder-dummy.m */,
-				236AF9C626DB49E835C461BBC6E57499 /* SNVideoRecorder-prefix.pch */,
-				5202E06E37C89BEA217387846FC9FB24 /* SNVideoRecorder-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SNVideoRecorder";
 			sourceTree = "<group>";
 		};
 		E4FDAE32ED45DC00B87D192BAB73C53D /* Frameworks */ = {
@@ -496,7 +478,7 @@
 			);
 			name = "Pods-SNVideoRecorder_Tests";
 			productName = "Pods-SNVideoRecorder_Tests";
-			productReference = AC671873907626580EDD039093229040 /* Pods_SNVideoRecorder_Tests.framework */;
+			productReference = 93009395DB6498EB4A767EEF09BB522B /* Pods_SNVideoRecorder_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */ = {
@@ -513,7 +495,7 @@
 			);
 			name = NVActivityIndicatorView;
 			productName = NVActivityIndicatorView;
-			productReference = 02D38FC987EE663B00F7142C3CFF4C91 /* NVActivityIndicatorView.framework */;
+			productReference = E1744942E0C9F8718AF4199488B2406C /* NVActivityIndicatorView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		615E9BED2B7E19485DF2875C1ACBBA87 /* Pods-SNVideoRecorder_Example */ = {
@@ -532,44 +514,25 @@
 			);
 			name = "Pods-SNVideoRecorder_Example";
 			productName = "Pods-SNVideoRecorder_Example";
-			productReference = D804B21C3B1DB58073049CDD9B48E85C /* Pods_SNVideoRecorder_Example.framework */;
+			productReference = 8565E0F464FC7D074E2822D992760B9B /* Pods_SNVideoRecorder_Example.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		690719523F2D1C042B9031499E3B64FE /* SNVideoRecorder-SNVideoRecorder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 443FDFA4338E71D63A49DEE5BEDD6987 /* Build configuration list for PBXNativeTarget "SNVideoRecorder-SNVideoRecorder" */;
-			buildPhases = (
-				45D20C03C5F56B0C569DEC739198ABAB /* Sources */,
-				CE2B604D6DA667B370EBB7EC35940619 /* Frameworks */,
-				F786F9336953026B8E18D7E8732D5A7D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SNVideoRecorder-SNVideoRecorder";
-			productName = "SNVideoRecorder-SNVideoRecorder";
-			productReference = C06552538A5250A64CA2B85A8C002CA9 /* SNVideoRecorder.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		77037FF471A3CCFF493D9A0980649C58 /* SNVideoRecorder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A04A123C941D9557C6E24DF0C09500E3 /* Build configuration list for PBXNativeTarget "SNVideoRecorder" */;
 			buildPhases = (
-				213E89A326BB4DB5F5EC22C15DD384E4 /* Sources */,
+				2F16C94212812470426C6193511F6C83 /* Sources */,
 				7187F293F5CA5208EAEB0119DF3C2329 /* Frameworks */,
-				A9E357C67299B77A6C5B0AF2BBEEACF8 /* Resources */,
 				9D95EC31D107B2520525A7C441A90199 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				FDCFE0FB5319ABF14A2329C8D8A6562E /* PBXTargetDependency */,
-				8AFC453A11CE4753CD839E7A5AA6BB80 /* PBXTargetDependency */,
 			);
 			name = SNVideoRecorder;
 			productName = SNVideoRecorder;
-			productReference = F6A7A3F72BE55B795F3F80622302FEE2 /* SNVideoRecorder.framework */;
+			productReference = 56B1A6B2E0324822D4C0371F58E48B19 /* SNVideoRecorder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -589,7 +552,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C5519D2D44168A8C45ADCAAC9B064060 /* Products */;
+			productRefGroup = A5F7715DAAFCDF74487513844EAA856D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -597,42 +560,23 @@
 				615E9BED2B7E19485DF2875C1ACBBA87 /* Pods-SNVideoRecorder_Example */,
 				157980821258622575E2A5ECE83E626E /* Pods-SNVideoRecorder_Tests */,
 				77037FF471A3CCFF493D9A0980649C58 /* SNVideoRecorder */,
-				690719523F2D1C042B9031499E3B64FE /* SNVideoRecorder-SNVideoRecorder */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		A9E357C67299B77A6C5B0AF2BBEEACF8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7CC256A3339212720E918F389342A8EC /* SNVideoRecorder.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F786F9336953026B8E18D7E8732D5A7D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		213E89A326BB4DB5F5EC22C15DD384E4 /* Sources */ = {
+		2F16C94212812470426C6193511F6C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75FC7E7AA75BBB6D118B581C2B4D7EF3 /* SNImageViewerViewController.swift in Sources */,
-				EB6298B69AE729266C42698E20E8EE53 /* SNRecordButton.swift in Sources */,
-				524674D94A02246779721AB947459973 /* SNRecordingCountDown.swift in Sources */,
-				DFEE242D9EFC81F1C19F4C67F0F5A2CB /* SNVideoRecorder-dummy.m in Sources */,
-				63E7CE2A6ABCC5E5AB2EF1822FE8BFBD /* SNVideoRecorderDelegate.swift in Sources */,
-				4E9E748F16F8F26483DAF10F66547674 /* SNVideoRecorderViewController.swift in Sources */,
-				E2C0E5BF40274670068EA54A2A581A1D /* SNVideoRecorderViewProtocol.swift in Sources */,
-				AB6D8EED1F4F95EA00BE2B67 /* SNVideoViewerViewController.swift in Sources */,
+				946FAD18AED00C38C7B49044D43A9E8C /* SNImageViewerViewController.swift in Sources */,
+				692FA4811191FFC8A571B666F17C0938 /* SNRecordButton.swift in Sources */,
+				2036187B72525D14A211B1916999D345 /* SNRecordingCountDown.swift in Sources */,
+				9BC479EACA48CDC1F8C0E0A55E768BD4 /* SNVideoRecorder-dummy.m in Sources */,
+				4F97CBD405EA0E1353CFCCBCA7B965CF /* SNVideoRecorderDelegate.swift in Sources */,
+				56DA04D6A32C9E39C7DE8DB0412517B8 /* SNVideoRecorderViewController.swift in Sources */,
+				193A2A2090534B3460F778FC26DEE89D /* SNVideoRecorderViewProtocol.swift in Sources */,
+				4B4B93D1EB905A76AD94B9D1EBEE2FF2 /* SNVideoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,13 +625,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45D20C03C5F56B0C569DEC739198ABAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		518ADF671A152F929F4FE4BBB3E3066B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,12 +649,6 @@
 			name = NVActivityIndicatorView;
 			target = 3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */;
 			targetProxy = 92D46918C5267C5C40DD4B7A40E64CE7 /* PBXContainerItemProxy */;
-		};
-		8AFC453A11CE4753CD839E7A5AA6BB80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SNVideoRecorder-SNVideoRecorder";
-			target = 690719523F2D1C042B9031499E3B64FE /* SNVideoRecorder-SNVideoRecorder */;
-			targetProxy = E2018146EDC391BB51007320AF8BCE62 /* PBXContainerItemProxy */;
 		};
 		D695B3511A18DFD0EADB255B343EE254 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -774,7 +705,7 @@
 		};
 		4A3CAE84D141B4A06C41A4DC478CC02F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */;
+			baseConfigurationReference = A7AAB89CD8A3A562C953E87F1F2EE8BF /* SNVideoRecorder.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -806,23 +737,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		684170E27EC62A01BC362226A5B50A33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SNVideoRecorder";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SNVideoRecorder/ResourceBundle-SNVideoRecorder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = SNVideoRecorder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		79CD0688D12AC912E675B4BCE470D8BE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -897,7 +811,7 @@
 		};
 		87387551E413CA1AFE10D0CBC6475807 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */;
+			baseConfigurationReference = A7AAB89CD8A3A562C953E87F1F2EE8BF /* SNVideoRecorder.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1098,23 +1012,6 @@
 			};
 			name = Release;
 		};
-		C8E5E5A3DCE84B1FB795BA5F64AE7390 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF44200C08387C6AFBD48E44CF0E835B /* SNVideoRecorder.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SNVideoRecorder";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SNVideoRecorder/ResourceBundle-SNVideoRecorder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = SNVideoRecorder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		DC687050A79D07376DB88583E6C81314 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F592EDE7475266FF084AE8A9C5B5BAC /* NVActivityIndicatorView.xcconfig */;
@@ -1176,15 +1073,6 @@
 			buildConfigurations = (
 				B8BE5CDE968933D94B2B7066055D845E /* Debug */,
 				79CD0688D12AC912E675B4BCE470D8BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		443FDFA4338E71D63A49DEE5BEDD6987 /* Build configuration list for PBXNativeTarget "SNVideoRecorder-SNVideoRecorder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8E5E5A3DCE84B1FB795BA5F64AE7390 /* Debug */,
-				684170E27EC62A01BC362226A5B50A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

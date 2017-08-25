@@ -19,11 +19,6 @@
     "ios": "9.0"
   },
   "source_files": "SNVideoRecorder/Classes/**/*",
-  "resource_bundles": {
-    "SNVideoRecorder": [
-      "SNVideoRecorder/Assets/*.png"
-    ]
-  },
   "frameworks": [
     "UIKit",
     "AVFoundation"

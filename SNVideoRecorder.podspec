@@ -32,9 +32,9 @@ A WhatsApp-like video recorder view controller.
 
   s.source_files = 'SNVideoRecorder/Classes/**/*'
   
-  s.resource_bundles = {
-    'SNVideoRecorder' => ['SNVideoRecorder/Assets/*.png']
-  }
+  #s.resource_bundles = {
+  #  'SNVideoRecorder' => ['SNVideoRecorder/Assets/*.png']
+  #}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'AVFoundation'
