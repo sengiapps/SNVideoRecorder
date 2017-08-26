@@ -18,11 +18,11 @@ enum SNCaptureMode:UInt8 {
 public class SNVideoRecorderViewController: UIViewController {
     public weak var delegate:SNVideoRecorderDelegate?
     var session:AVCaptureSession?
-    var input:AVCaptureDeviceInput?
-    //var userreponsevideoData = NSData()
-    //var userreponsethumbimageData = NSData()
+    var videoInput:AVCaptureDeviceInput?
+    var audioInput:AVCaptureDeviceInput?
     var movieFileOutput:AVCaptureMovieFileOutput?
     var imageFileOutput:AVCaptureStillImageOutput?
+    public var closeOnCapture:Bool = true
     public var finalURL:URL?
     public var maxSecondsToRecord = 59
     var defaultCameraPosition:AVCaptureDevicePosition = .front
@@ -69,7 +69,6 @@ public class SNVideoRecorderViewController: UIViewController {
         let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
         let v = NVActivityIndicatorView(frame: rect, type: .ballClipRotatePulse, color: .white, padding: 5.0)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.isHidden = true
         return v
     }()
     
@@ -129,12 +128,13 @@ public class SNVideoRecorderViewController: UIViewController {
         recordOption.cancel()
     }
     
-    func createSession(device: AVCaptureDevice) {
+    func createSession(device: AVCaptureDevice, audioDevice: AVCaptureDevice) {
         session = AVCaptureSession()
         session?.beginConfiguration()
         do {
             try device.lockForConfiguration()
-            input = try AVCaptureDeviceInput(device: device)
+            videoInput = try AVCaptureDeviceInput(device: device)
+            audioInput = try AVCaptureDeviceInput(device: audioDevice)
         } catch let error {
             print(error)
         }
@@ -147,8 +147,11 @@ public class SNVideoRecorderViewController: UIViewController {
             return
         }
         
-        if s.canAddInput(input) {
-            s.addInput(input)
+        if s.canAddInput(audioInput) {
+            s.addInput(audioInput)
+        }
+        if s.canAddInput(videoInput) {
+            s.addInput(videoInput)
         }
         
         // video output
@@ -173,8 +176,8 @@ public class SNVideoRecorderViewController: UIViewController {
     }
     
     func destroySession() {
-        session?.removeInput(input)
-        input = nil
+        session?.removeInput(videoInput)
+        videoInput = nil
         
         if session != nil {
             if session!.isRunning {
@@ -188,15 +191,25 @@ public class SNVideoRecorderViewController: UIViewController {
         previewLayer?.session = session
     }
     
-    func cameraWithPosition(position: AVCaptureDevicePosition) -> AVCaptureDevice? {
-        if let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) {
+    func cameraWithPosition(position: AVCaptureDevicePosition) -> (audio:AVCaptureDevice?, video:AVCaptureDevice?) {
+        if let devices = AVCaptureDevice.devices() {
+            var audio:AVCaptureDevice?
+            var video:AVCaptureDevice?
             for device in devices {
-                if (device as AnyObject).position == position {
-                    return device as? AVCaptureDevice
+                if (device as AnyObject).hasMediaType(AVMediaTypeVideo) {
+                    if (device as AnyObject).position == position {
+                        video = device as? AVCaptureDevice
+                    }
+                }
+                
+                if (device as AnyObject).hasMediaType(AVMediaTypeAudio) {
+                    audio = device as? AVCaptureDevice
                 }
             }
+            
+            return (audio, video)
         }
-        return nil
+        return (nil, nil)
     }
     
     func addViews() {
@@ -293,40 +306,39 @@ public class SNVideoRecorderViewController: UIViewController {
     }
     
     func closeHandler(sender:UIButton) {
-        if let navigation = navigationController {
-            let _ = navigation.popViewController(animated: true)
-        } else {
-            dismiss(animated: true) {
-                print("done")
-            }
-        }
+        closeView()
     }
     
     func connect(withDeviceAt position: AVCaptureDevicePosition) -> Bool {
-        if let device = cameraWithPosition(position: position) {
-            if device.hasTorch {
-                flashLightOption.isEnabled = true
-                flashLightOption.isHidden = false
-            } else {
-                flashLightOption.isEnabled = false
-                flashLightOption.isHidden = true
-            }
-            // video output
-            movieFileOutput = AVCaptureMovieFileOutput()
-            let maxDuration:CMTime = CMTimeMake(600, 10)
-            movieFileOutput?.maxRecordedDuration = maxDuration
-            movieFileOutput?.minFreeDiskSpaceLimit = 1024 * 1024
-            
-            // image output
-            imageFileOutput = AVCaptureStillImageOutput()
-            imageFileOutput?.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
-            
-            createSession(device: device)
-            recordOption.delegate = self
-            countDown.setup(seconds: maxSecondsToRecord)
-            countDown.delegate = self
-            return true
+        let devices = cameraWithPosition(position: position)
+        guard let video = devices.video else {
+            return false
         }
+        guard let audio = devices.audio else {
+            return false
+        }
+        
+        if video.hasTorch {
+            flashLightOption.isEnabled = true
+            flashLightOption.isHidden = false
+        } else {
+            flashLightOption.isEnabled = false
+            flashLightOption.isHidden = true
+        }
+        // video output
+        movieFileOutput = AVCaptureMovieFileOutput()
+        let maxDuration:CMTime = CMTimeMake(600, 10)
+        movieFileOutput?.maxRecordedDuration = maxDuration
+        movieFileOutput?.minFreeDiskSpaceLimit = 1024 * 1024
+        
+        // image output
+        imageFileOutput = AVCaptureStillImageOutput()
+        imageFileOutput?.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+        
+        createSession(device: video, audioDevice: audio)
+        recordOption.delegate = self
+        countDown.setup(seconds: maxSecondsToRecord)
+        countDown.delegate = self
         return false
     }
     
@@ -347,6 +359,16 @@ public class SNVideoRecorderViewController: UIViewController {
         })
         alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func closeView() {
+        if let navigation = navigationController {
+            let _ = navigation.popViewController(animated: true)
+        } else {
+            dismiss(animated: true) {
+                print("done")
+            }
+        }
     }
 }
 
@@ -434,11 +456,11 @@ extension SNVideoRecorderViewController: SNRecordButtonDelegate {
             return
         }
         
-        recordOption.isEnabled = false
-        loading.startAnimating()
         countDown.pause()
         if !isCanceled {
             s.stopRunning()
+            recordOption.isEnabled = false
+            loading.startAnimating()
         } else {
             countDown.setup(seconds: maxSecondsToRecord)
         }
@@ -469,6 +491,10 @@ extension SNVideoRecorderViewController: SNImageViewerDelegate {
             }
             
             delegate?.videoRecorder(withImage: img)
+            
+            if closeOnCapture {
+                closeView()
+            }
         }
     }
 }
@@ -482,6 +508,10 @@ extension SNVideoRecorderViewController: SNVideoViewerDelegate {
             }
             
             self.delegate?.videoRecorder(withVideo: value)
+            
+            if closeOnCapture {
+                closeView()
+            }
         }
     }
 }

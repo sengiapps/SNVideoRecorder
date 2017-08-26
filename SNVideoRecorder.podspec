@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNVideoRecorder'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A WhatsApp-like video recorder.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A WhatsApp-like video recorder view controller.
+A WhatsApp-like video recorder view controller and photo capture.
                        DESC
 
   s.homepage         = 'https://github.com/dairdr/SNVideoRecorder'

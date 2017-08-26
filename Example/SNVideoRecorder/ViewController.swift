@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         vc.delegate = self
         vc.flashLightOnIcon = UIImage(named: "flash_light_50")
         vc.flashLightOffIcon = UIImage(named: "flash_light_off_50")
+        vc.closeOption.isHidden = true
         
         vc.flashLightOption.setImage(UIImage(named: "flash_light_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
         vc.switchCameraOption.setImage(UIImage(named: "switch_camera_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
