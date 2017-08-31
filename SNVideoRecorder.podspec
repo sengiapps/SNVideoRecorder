@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNVideoRecorder'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A WhatsApp-like video recorder.'
 
 # This description is used to generate tags and improve search results.

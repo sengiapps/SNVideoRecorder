@@ -29,8 +29,13 @@ public class SNVideoRecorderViewController: UIViewController {
     public override var prefersStatusBarHidden: Bool {
         return true
     }
+    // flash light button options
     public var flashLightOnIcon:UIImage?
     public var flashLightOffIcon:UIImage?
+    
+    // confirmation view button text
+    public var agree:String = NSLocalizedString("Ok", comment: "")
+    public var discard:String = NSLocalizedString("Discard", comment: "")
     
     // components
     var previewLayer:AVCaptureVideoPreviewLayer?
@@ -318,13 +323,16 @@ public class SNVideoRecorderViewController: UIViewController {
             return false
         }
         
-        if video.hasTorch {
-            flashLightOption.isEnabled = true
-            flashLightOption.isHidden = false
-        } else {
-            flashLightOption.isEnabled = false
-            flashLightOption.isHidden = true
+        DispatchQueue.main.async {
+            if video.hasTorch {
+                self.flashLightOption.isEnabled = true
+                self.flashLightOption.isHidden = false
+            } else {
+                self.flashLightOption.isEnabled = false
+                self.flashLightOption.isHidden = true
+            }
         }
+        
         // video output
         movieFileOutput = AVCaptureMovieFileOutput()
         let maxDuration:CMTime = CMTimeMake(600, 10)
@@ -412,6 +420,7 @@ extension SNVideoRecorderViewController: AVCaptureFileOutputRecordingDelegate {
             case .completed:
                 DispatchQueue.main.async(execute: {
                     let vc = SNVideoViewerViewController()
+                    vc.modalPresentationStyle = .overCurrentContext
                     vc.delegate = self
                     vc.url = videoFilePath
                     self.present(vc, animated: false, completion: nil)
@@ -442,6 +451,7 @@ extension SNVideoRecorderViewController: SNRecordButtonDelegate {
                     (buffer, error) -> Void in
                     if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer) {
                         let vc = SNImageViewerViewController()
+                        vc.modalPresentationStyle = .overCurrentContext
                         vc.image = UIImage(data: imageData)
                         vc.delegate = self
                         self.present(vc, animated: false, completion: nil)
