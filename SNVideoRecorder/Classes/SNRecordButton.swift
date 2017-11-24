@@ -81,7 +81,7 @@ class SNRecordButton: UIView {
         layer.cornerRadius = frame.width / 2
     }
     
-    func longGestureHandler(gesture:UILongPressGestureRecognizer) {
+    @objc func longGestureHandler(gesture:UILongPressGestureRecognizer) {
         switch gesture.state {
         case .began:
             if isEnabled {
@@ -96,7 +96,7 @@ class SNRecordButton: UIView {
         }
     }
     
-    func tabGestureHandler(gesture:UITapGestureRecognizer) {
+    @objc func tabGestureHandler(gesture:UITapGestureRecognizer) {
         if isEnabled {
             delegate?.didStart(mode: .photo)
         }

@@ -25,7 +25,7 @@ public class SNVideoRecorderViewController: UIViewController {
     public var closeOnCapture:Bool = true
     public var finalURL:URL?
     public var maxSecondsToRecord = 59
-    var defaultCameraPosition:AVCaptureDevicePosition = .front
+    public var initCameraPosition:AVCaptureDevice.Position = .front
     public override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -34,8 +34,8 @@ public class SNVideoRecorderViewController: UIViewController {
     public var flashLightOffIcon:UIImage?
     
     // confirmation view button text
-    public var agree:String = NSLocalizedString("Ok", comment: "")
-    public var discard:String = NSLocalizedString("Discard", comment: "")
+    public var agreeText:String = NSLocalizedString("Ok", comment: "")
+    public var discardText:String = NSLocalizedString("Discard", comment: "")
     
     // components
     var previewLayer:AVCaptureVideoPreviewLayer?
@@ -82,6 +82,8 @@ public class SNVideoRecorderViewController: UIViewController {
         
         view.backgroundColor = .black
         
+        flashLightOption.setImage(flashLightOnIcon?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
         addViews()
         setupViews()
     }
@@ -91,15 +93,15 @@ public class SNVideoRecorderViewController: UIViewController {
         
         setupNavigationBar()
         
-        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) ==  .authorized {
-            let _ = connect(withDeviceAt: defaultCameraPosition)
+        if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  .authorized {
+            let _ = connect(withDeviceAt: initCameraPosition)
         } else {
             switchCameraOption.isEnabled = false
             flashLightOption.isEnabled = false
             recordOption.isEnabled = false
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted) -> Void in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) -> Void in
                 if granted {
-                    let _ = self.connect(withDeviceAt: self.defaultCameraPosition)
+                    let _ = self.connect(withDeviceAt: self.initCameraPosition)
                 } else {
                     DispatchQueue.main.async {
                         let title = NSLocalizedString("permission_camera_title", comment: "")
@@ -123,11 +125,11 @@ public class SNVideoRecorderViewController: UIViewController {
     public override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         switch UIDevice.current.orientation {
         case .portrait:
-            previewLayer?.connection.videoOrientation = .portrait
+            previewLayer?.connection?.videoOrientation = .portrait
         case .landscapeLeft:
-            previewLayer?.connection.videoOrientation = .landscapeRight
+            previewLayer?.connection?.videoOrientation = .landscapeRight
         default:
-            previewLayer?.connection.videoOrientation = .landscapeLeft
+            previewLayer?.connection?.videoOrientation = .landscapeLeft
         }
         
         recordOption.cancel()
@@ -152,11 +154,11 @@ public class SNVideoRecorderViewController: UIViewController {
             return
         }
         
-        if s.canAddInput(audioInput) {
-            s.addInput(audioInput)
+        if s.canAddInput(audioInput!) {
+            s.addInput(audioInput!)
         }
-        if s.canAddInput(videoInput) {
-            s.addInput(videoInput)
+        if s.canAddInput(videoInput!) {
+            s.addInput(videoInput!)
         }
         
         // video output
@@ -181,7 +183,7 @@ public class SNVideoRecorderViewController: UIViewController {
     }
     
     func destroySession() {
-        session?.removeInput(videoInput)
+        session?.removeInput(videoInput!)
         videoInput = nil
         
         if session != nil {
@@ -196,31 +198,29 @@ public class SNVideoRecorderViewController: UIViewController {
         previewLayer?.session = session
     }
     
-    func cameraWithPosition(position: AVCaptureDevicePosition) -> (audio:AVCaptureDevice?, video:AVCaptureDevice?) {
-        if let devices = AVCaptureDevice.devices() {
-            var audio:AVCaptureDevice?
-            var video:AVCaptureDevice?
-            for device in devices {
-                if (device as AnyObject).hasMediaType(AVMediaTypeVideo) {
-                    if (device as AnyObject).position == position {
-                        video = device as? AVCaptureDevice
-                    }
-                }
-                
-                if (device as AnyObject).hasMediaType(AVMediaTypeAudio) {
-                    audio = device as? AVCaptureDevice
+    func cameraWithPosition(position: AVCaptureDevice.Position) -> (audio:AVCaptureDevice?, video:AVCaptureDevice?) {
+        let devices = AVCaptureDevice.devices()
+        var audio:AVCaptureDevice?
+        var video:AVCaptureDevice?
+        for device in devices {
+            if (device as AnyObject).hasMediaType(AVMediaType.video) {
+                if (device as AnyObject).position == position {
+                    video = device
                 }
             }
             
-            return (audio, video)
+            if (device as AnyObject).hasMediaType(AVMediaType.audio) {
+                audio = device
+            }
         }
-        return (nil, nil)
+        
+        return (audio, video)
     }
     
     func addViews() {
         // camera preview
         previewLayer = AVCaptureVideoPreviewLayer()
-        previewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer!.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.insertSublayer(previewLayer!, at: 0)
         view.addSubview(loading)
         
@@ -277,19 +277,19 @@ public class SNVideoRecorderViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
     }
     
-    func switchCameraHandler(sender:UIButton) {
-        if defaultCameraPosition == .front {
-            defaultCameraPosition = .back
+    @objc func switchCameraHandler(sender:UIButton) {
+        if initCameraPosition == .front {
+            initCameraPosition = .back
         } else {
-            defaultCameraPosition = .front
+            initCameraPosition = .front
         }
         
         destroySession()
-        let _ = connect(withDeviceAt: defaultCameraPosition)
+        let _ = connect(withDeviceAt: initCameraPosition)
     }
     
-    func flashLightHandler(sender:UIButton) {
-        if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) {
+    @objc func flashLightHandler(sender:UIButton) {
+        if let device = AVCaptureDevice.default(for: AVMediaType.video) {
             if device.hasTorch {
                 do {
                     try device.lockForConfiguration()
@@ -310,11 +310,11 @@ public class SNVideoRecorderViewController: UIViewController {
         }
     }
     
-    func closeHandler(sender:UIButton) {
+    @objc func closeHandler(sender:UIButton) {
         closeView()
     }
     
-    func connect(withDeviceAt position: AVCaptureDevicePosition) -> Bool {
+    func connect(withDeviceAt position: AVCaptureDevice.Position) -> Bool {
         let devices = cameraWithPosition(position: position)
         guard let video = devices.video else {
             return false
@@ -386,11 +386,11 @@ extension SNVideoRecorderViewController: SNVideoRecorderViewProtocol {
 
 extension SNVideoRecorderViewController: AVCaptureFileOutputRecordingDelegate {
     
-    public func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+    public func fileOutput(_ captureOutput: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
         
     }
     
-    public func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
+    public func fileOutput(_ captureOutput: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         let randomName = ProcessInfo.processInfo.globallyUniqueString
         let videoFilePath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(randomName).appendingPathExtension("mp4")
         
@@ -405,7 +405,7 @@ extension SNVideoRecorderViewController: AVCaptureFileOutputRecordingDelegate {
         
         let sourceAsset = AVURLAsset(url: outputFileURL)
         let export: AVAssetExportSession = AVAssetExportSession(asset: sourceAsset, presetName: AVAssetExportPresetMediumQuality)!
-        export.outputFileType = AVFileTypeMPEG4
+        export.outputFileType = AVFileType.mp4
         export.outputURL = videoFilePath
         export.shouldOptimizeForNetworkUse = true
         let start = CMTimeMakeWithSeconds(0.0, 0)
@@ -443,13 +443,13 @@ extension SNVideoRecorderViewController: SNRecordButtonDelegate {
             let randomName = ProcessInfo.processInfo.globallyUniqueString
             let filePath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(randomName).appendingPathExtension("mp4")
             
-            movieFileOutput?.startRecording(toOutputFileURL: filePath, recordingDelegate: self)
+            movieFileOutput?.startRecording(to: filePath, recordingDelegate: self)
             countDown.start(on: maxSecondsToRecord)
         } else {
-            if let videoConnection = imageFileOutput?.connection(withMediaType: AVMediaTypeVideo) {
+            if let videoConnection = imageFileOutput?.connection(with: AVMediaType.video) {
                 imageFileOutput?.captureStillImageAsynchronously(from: videoConnection) {
                     (buffer, error) -> Void in
-                    if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer) {
+                    if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer!) {
                         let vc = SNImageViewerViewController()
                         vc.modalPresentationStyle = .overCurrentContext
                         vc.image = UIImage(data: imageData)

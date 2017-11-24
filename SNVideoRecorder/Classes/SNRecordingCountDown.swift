@@ -77,7 +77,7 @@ class SNRecordingCountDown: UIView {
         delegate?.countDown(didPauseAt: TimeInterval(seconds))
     }
     
-    func updateTimerHandler() {
+    @objc func updateTimerHandler() {
         seconds -= 1
         label.text = timeString(time: TimeInterval(seconds))
         
