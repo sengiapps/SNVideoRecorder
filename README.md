@@ -23,12 +23,12 @@ pod "SNVideoRecorder"
 ```swift
 // implement the protocol SNVideoRecorderDelegate
 extension ViewController: SNVideoRecorderDelegate {
-func videoRecorder(withVideo url: URL) {
-print(url) // url for the video
-}
-func videoRecorder(withImage image: UIImage) {
-print(image) // image
-}
+    func videoRecorder(withVideo url: URL) {
+        print(url) // url for the video
+    }
+    func videoRecorder(withImage image: UIImage) {
+        print(image) // image
+    }
 }
 
 // then in your controller use some like this
