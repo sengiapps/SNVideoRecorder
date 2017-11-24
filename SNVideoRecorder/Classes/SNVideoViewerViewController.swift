@@ -51,7 +51,7 @@ class SNVideoViewerViewController: UIViewController {
         if let value = url {
             player = AVPlayer(url: value)
             playerLayer = AVPlayerLayer(player: player!)
-            playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             view.layer.insertSublayer(playerLayer!, at: 0)
         }
     }
@@ -97,13 +97,13 @@ class SNVideoViewerViewController: UIViewController {
         discardOption.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
     
-    func agreeHandler(sender:UIButton) {
+    @objc func agreeHandler(sender:UIButton) {
         dismiss(animated: false) {
             self.delegate?.videoView(finishWithAgree: true, andURL: self.url)
         }
     }
     
-    func discardHandler(sender:UIButton) {
+    @objc func discardHandler(sender:UIButton) {
         dismiss(animated: false) {
             self.delegate?.videoView(finishWithAgree: false, andURL: self.url)
         }

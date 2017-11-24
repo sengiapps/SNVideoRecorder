@@ -87,7 +87,7 @@ class SNImageViewerViewController: UIViewController {
         discardOption.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
     
-    func pinchGestureHandler(gesture: UIPinchGestureRecognizer) {
+    @objc func pinchGestureHandler(gesture: UIPinchGestureRecognizer) {
         if gesture.state == .began || gesture.state == .changed {
             let currentScale: CGFloat = gesture.view?.layer.value(forKeyPath: "transform.scale.x") as! CGFloat
             let minScale:CGFloat = 0.5
@@ -106,7 +106,7 @@ class SNImageViewerViewController: UIViewController {
         }
     }
     
-    func panGestureHandler(gesture:UIPanGestureRecognizer) {
+    @objc func panGestureHandler(gesture:UIPanGestureRecognizer) {
         let translation = gesture.translation(in: gesture.view?.superview)
         if gesture.state == .began || gesture.state == .changed {
             gesture.view?.center = CGPoint(x: (gesture.view?.center.x)! + translation.x, y: (gesture.view?.center.y)! + translation.y)
@@ -114,13 +114,13 @@ class SNImageViewerViewController: UIViewController {
         }
     }
     
-    func agreeHandler(sender:UIButton) {
+    @objc func agreeHandler(sender:UIButton) {
         dismiss(animated: false) {
             self.delegate?.imageView(finishWithAgree: true, andImage: self.image)
         }
     }
     
-    func discardHandler(sender:UIButton) {
+    @objc func discardHandler(sender:UIButton) {
         dismiss(animated: false) {
             self.delegate?.imageView(finishWithAgree: false, andImage: self.image)
         }
