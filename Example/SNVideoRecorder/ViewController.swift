@@ -21,10 +21,13 @@ class ViewController: UIViewController {
         vc.flashLightOnIcon = UIImage(named: "flash_light_50")
         vc.flashLightOffIcon = UIImage(named: "flash_light_off_50")
         vc.closeOption.isHidden = true
-        
         vc.flashLightOption.setImage(UIImage(named: "flash_light_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
         vc.switchCameraOption.setImage(UIImage(named: "switch_camera_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
         vc.closeOption.setImage(UIImage(named: "delete_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        vc.agreeText = "ok"
+        vc.discardText = "discard"
+        vc.maxSecondsToRecord = 58
+        vc.initCameraPosition = .front
         present(vc, animated: true, completion: nil)
     }
 }
