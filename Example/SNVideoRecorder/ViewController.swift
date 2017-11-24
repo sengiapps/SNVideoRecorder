@@ -18,16 +18,29 @@ class ViewController: UIViewController {
     @IBAction func openHandler(_ sender: Any) {
         let vc = SNVideoRecorderViewController()
         vc.delegate = self
+        
+        // flashlight icons
         vc.flashLightOnIcon = UIImage(named: "flash_light_50")
         vc.flashLightOffIcon = UIImage(named: "flash_light_off_50")
-        vc.closeOption.isHidden = true
-        vc.flashLightOption.setImage(UIImage(named: "flash_light_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
+        // switch camera icon
         vc.switchCameraOption.setImage(UIImage(named: "switch_camera_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
+        // close options
+        vc.closeOption.isHidden = true
         vc.closeOption.setImage(UIImage(named: "delete_50")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
+        // preview text
         vc.agreeText = "ok"
         vc.discardText = "discard"
+        
+        // max seconds able to record
         vc.maxSecondsToRecord = 58
+        
+        // start camera position
         vc.initCameraPosition = .front
+        
+        // show up
         present(vc, animated: true, completion: nil)
     }
 }

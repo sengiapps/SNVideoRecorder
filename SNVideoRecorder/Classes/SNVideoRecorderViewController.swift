@@ -82,6 +82,8 @@ public class SNVideoRecorderViewController: UIViewController {
         
         view.backgroundColor = .black
         
+        flashLightOption.setImage(flashLightOnIcon?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
         addViews()
         setupViews()
     }
