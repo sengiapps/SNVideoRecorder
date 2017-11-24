@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SNVideoRecorder'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A WhatsApp-like video recorder.'
   s.description      = 'A WhatsApp-like video recorder view controller and photo capture.'
   s.homepage         = 'https://github.com/dairdr/SNVideoRecorder'
